@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    modulePrefix: 'vector-ember',
+    modulePrefix: 'embedded-ember',
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
@@ -16,7 +16,19 @@ module.exports = function(environment) {
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created
-    }
+    },
+
+    // Add these three keys to enable ember-cli-embedded
+    // for ember-cli-embedded
+    embedded: {
+      embed: true
+    },
+    // this is specific to this test application
+    contentSecurityPolicy: {
+      'default-src': "'self' https://imtapps-ember-test.s3.amazonaws.com",
+    },
+    // this must always be true for ember-cli-embedded to work
+    exportApplicationGlobal: true,
   };
 
   if (environment === 'development') {

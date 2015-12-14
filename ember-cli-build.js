@@ -4,7 +4,12 @@ var EmberApp = require('ember-cli/lib/broccoli/ember-app');
 
 module.exports = function(defaults) {
   var app = new EmberApp(defaults, {
-    // Add options here
+    fingerprint: {
+      // update image files in the components to reference the fingerprinted / revved versions
+      replaceExtenions: ['html', 'css', 'js', 'hbs'],
+      // this is specific S3
+      prepend: 'https://imtapps-ember-test.s3.amazonaws.com/'
+    }
   });
 
   // Use `app.import` to add additional libraries to the generated
