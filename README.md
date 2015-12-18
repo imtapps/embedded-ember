@@ -1,10 +1,12 @@
 # Embedded-ember
 
-An example of how to transition a server side rendered application to an API driven, front-end application.
+An example of how to transition a server side rendered application to an API driven server application and a seperate front-end application.
 
-This allows for parts of the old application to be converted to Ember components as they are developed.
+This example allows for parts of the old application to be converted to Ember components as they are developed.
 
 This example project uses a Django site on the back end with the Ember application being hosted on S3. Some configuration is specific to these choices.
+
+The example Django application is on the `django-template-tag` branch.
 
 ## Ember addons
 
@@ -54,13 +56,13 @@ The component name corresponds with the [Django template](https://github.com/imt
 For those concerned about dependencies:
 
 * [ember-islands](https://github.com/mitchlloyd/ember-islands/blob/master/package.json)  
-  └[ember-cli-version-checker](https://github.com/rwjblue/ember-cli-version-checker/blob/master/package.json)  
-  &nbsp;&nbsp;└[semver](https://github.com/npm/node-semver/blob/master/package.json)  
+  └ [ember-cli-version-checker](https://github.com/rwjblue/ember-cli-version-checker/blob/master/package.json)  
+  &nbsp;&nbsp;└ [semver](https://github.com/npm/node-semver/blob/master/package.json)  
 
 * [ember-cli-embedded](https://github.com/xcambar/ember-cli-embedded/blob/master/package.json)  
-  ├[ember-export-application-global](https://github.com/ember-cli/ember-export-application-global/blob/master/package.json)  
-  └[ember-cli-babel](https://github.com/babel/ember-cli-babel/blob/master/package.json)  
-    &nbsp;&nbsp;└[several that are not shown for brevity](https://github.com/babel/ember-cli-babel)  
+  ├ [ember-export-application-global](https://github.com/ember-cli/ember-export-application-global/blob/master/package.json)  
+  └ [ember-cli-babel](https://github.com/babel/ember-cli-babel/blob/master/package.json)  
+    &nbsp;&nbsp;└ [several that are not shown for brevity](https://github.com/babel/ember-cli-babel)  
 
 
 # All follows is the stock ember readme
